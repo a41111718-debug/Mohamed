@@ -1,0 +1,63 @@
+<head>
+  <style>
+ #btn{ font-size: 30px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border-radius: 10%;
+    width: 150;
+    height: 50;
+    display: block;
+    margin: 50px;
+    box-shadow:
+    0 0 15px red , 0 0 50px red
+    ;
+  }
+  #btn:active{
+    background: yellow;
+    transform: scale(0.9);
+  }
+    #mo{
+      display: block;
+      width: 200px;
+      margin: 20 auto ;
+      border-radius: 50%;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <img id="mo" src="mo.jpg"><br>
+  <button id="btn" style="display:block;">info</button>
+  <button id="Btn" style="display:none;">press</button>
+  <img id="sex" src="noo.webp" style="width:200px;display:none;">
+  <h2 style="display:none;" id="text">
+    انت مستني ايه تاني خلاص علي كده امشي مع الف سلامه  
+  </h2>
+  <script>
+    const text=document.getElementById("text")
+    const sex=document.getElementById("sex")
+    const btn2=document.getElementById("Btn")
+    const btn1 =document.getElementById("btn")
+    btn1.addEventListener("click" ,function(){
+      alert("this boy which you see now is not human it is monester")
+      btn2.style.display="block"
+      btn1.style.display="none"
+    })
+    let num = 0
+    btn2.addEventListener("click",function(){
+      num ++
+      if(num==1){
+      sex.style.display="block"
+        
+      
+      btn2.innerText="back"}
+      else if(num == 2){
+        btn2.style.display="none"
+        sex.style.display="none"
+        text.style.display="block"
+      }
+    })
+  </script>
+</body>
